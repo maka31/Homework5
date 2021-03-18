@@ -10,27 +10,22 @@ public class Main {
         System.out.println(godFather.getHealth() + " " + godFather.getDamage() + " " + godFather.getDefenceType());
 
         createHeroes();
+        for (int i = 0; i < createHeroes().length; i++) {
+            System.out.println("______________________");
+            System.out.println("hero" + i);
+            System.out.println("Health: " + createHeroes()[i].getHealth());
+            System.out.println("Damage: " +  createHeroes()[i].getDamage());
+            System.out.println("Super ability: " +  createHeroes()[i].getSuperAbility());
+        }
     }
 
-    public static int createHeroes() {
-        Hero hero1 = new Hero(200, 15, "physical");
-        hero1.getHealth();
-        hero1.getDamage();
-        hero1.getSuperAbility();
+    public static Hero[] createHeroes() {
+        Hero hero0 = new Hero(200, 15, "physical");
+        Hero hero1 = new Hero(180, 18, "magical");
+        Hero hero2 = new Hero(160, 16);
 
-        Hero hero2 = new Hero(180, 18, "magical");
-        hero2.getHealth();
-        hero2.getSuperAbility();
-
-        Hero hero3 = new Hero(160, 16);
-        hero3.getHealth();
-        hero3.getDamage();
-
-        Hero[] array = {hero1, hero2, hero3};
-        for (int i = 0; i < array.length; i++) {
-            System.out.println();
-        }
-        return createHeroes();
+        Hero[] array = {hero0, hero1, hero2};
+        return array;
     }
 }
 
